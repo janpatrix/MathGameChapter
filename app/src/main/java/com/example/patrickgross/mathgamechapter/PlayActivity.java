@@ -1,11 +1,13 @@
 package com.example.patrickgross.mathgamechapter;
 
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class PlayActivity extends AppCompatActivity {
+public class PlayActivity extends Activity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +34,23 @@ public class PlayActivity extends AppCompatActivity {
         buttonObjectChoice2.setText("" + wrongAnswer1);
         buttonObjectChoice3.setText("" + wrongAnswer2);
 
+        buttonObjectChoice1.setOnClickListener(this);
+        buttonObjectChoice2.setOnClickListener(this);
+        buttonObjectChoice3.setOnClickListener(this);
+
+    }
+
+    @Override
+    public void onClick(View view){
+        switch (view.getId()) {
+
+            case R.id.buttonChoice1:
+                break;
+            case R.id.buttonChoice2:
+                break;
+            case R.id.buttonChoice3:
+                break;
+        }
 
     }
 }
